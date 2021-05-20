@@ -288,7 +288,7 @@ pg_amqp_publish_opt(PG_FUNCTION_ARGS, int channel) {
       int rv;
       amqp_rpc_reply_t *reply;
       amqp_boolean_t mandatory = 1;
-      amqp_boolean_t immediate = 1;
+      amqp_boolean_t immediate = 0;
       amqp_bytes_t exchange_b = amqp_cstring_bytes("amq.direct");
       amqp_bytes_t routing_key_b = amqp_cstring_bytes("");
       amqp_bytes_t body_b = amqp_cstring_bytes(""); 
